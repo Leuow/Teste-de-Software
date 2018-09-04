@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}%
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.2cm, right=2.2cm]%
+{geometry}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+
+\begin{document}
+
+\title{Teste de Software}
+\author{Leonardo Maia de Lima}
+\maketitle
+\section{Teste de Caixa Branca ou Funcional}
+
+O teste funcional, ou de caixa-preta, é baseado nos requisitos funcionais do software. Esta técnica não está preocupada com o comportamento interno do sistema durante a execução do teste, mas sim com a saída gerada após a entrada dos dados especificados. Tal tipo de teste é indicado para detectar erros de interface, de comportamento e/ou desempenho, podendo ser aplicada em todas as fases de testes (unidade, integração, sistema e aceitação). Uma dificuldade dessa técnina, por questões de tempo e recurso, é testar todas as entradas possíveis.
+Também chamada de teste funcional, teste comportamental, orientado a dado ou orientado a entrada e saída, a técnica de caixa-preta avalia o comportamento externo do componente de software, sem se considerar o comportamento interno do mesmo.\\ Dados de entrada são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Como detalhes de implementação não são considerados, os casos de teste são todos derivados da especificação.
+ 
+
+\subsection{Particionamento em classes de equivalência}
+Esse tipo de teste visa otimizar os casos de teste fazendo a maior cobertura possível do sistema, eliminando os casos redundantes. Para a execução desta técnica, seguimos algumas etapas.
+\subsubsection{Identificar as Classes de Equivalência}
+– Identificar, através da especificação dos dados de entrada, as classes de equivalência \\
+– Caracterizar pelo menos 2 grupos de valores de entrada para cada classe: \\
+\indent • Válidas: Valores Esperados pelo programa \\
+\indent • Inválidas: Entradas Inválidas ou inesperadas
+
+
+\subsection{Refinamento das Classes de Entrada}
+– Identificar se há razão para acreditar que elementos de uma mesma classe são tratados de forma diferente pelo
+programa, se sim, dividir estas em classes menores \\
+– Particionar Classes cujos atributos são considerados elementos chave para o item em teste.
+\subsection{Identificar as Classes de Saída}
+– Mapear todas as possíveis classes de saídas geradas pelo item em teste
+
+\subsection{Refinar as Classes de Saída}
+– Verificar se alguma classe de saída merece ser subdividida em classes menores
+• Ex: Código Genérico de Erro pode ser desmembrado em outros códigos.
+\subsection{Relacionar Classes de Entrada e Classes de Saída}
+– Criar um mapeamento entre as classes de entrada e as classe de saída esperadas
+\subsection{Derivar os Casos de Teste }
+– Atribuir um valor de entrada para cada classe de entrada (válidas e inválidas) \\
+– Elaborar casos de teste para as combinações das classes válidas \\
+– Elaborar casos de teste para todas as classes inválidas \\
+– Derivar casos de teste que cubram, de uma só vez, o maior número de classes válidas/inválidas
+
+
+
+\section{Análise do Valor Limite}
+É um complemento do particionamento de classes, onde são gerados casos focados nos limites das partições (valores mínimos e máximos)\\
+Exemplo: Os valores de entrada só podem estar no intervalo entre 1900 e 2018, então devemos testar os valores 1899, 1900, 2018 e 2019. (Não testamos os valores 1901 e 2017 pois estão dentro do intervalo de valores válidos).
+
+\section{Example 3. The whole is equal to the sum of the parts}
+
+The sum of two numbers
+
+\subsection{Solution}
+In tis problem, we are asked to find two numbers. Therefore, we must let x be one
+    
+\section{Example 4}     
+
+The sum of two consecutive numbers is 37. What are they?
+
+\subsection{Solution}
+
+Two consecutive numbers are 8 and 9, or 51 and 52. Let x, then, be the first  
+
+
+The two numbers are 18 and 19. 
+
+\section{Example 5}
+
+One number is 10 more than anot
+
+\subsection{Solution}
+
+Let x be the smaller number.
+
+
+
+That's the smaller number.The larger number is 10 more:15 
+
+\section{Example 6} 
+
+Divide \$80 among three people so that the second will have twice as much as the first, and the third will have \$5 less than the second.
+
+\subsection{Solution}
+
+Again we are asked to find one more number. We must begin by letting x
+  
+  
+ \bibliography{bibliografia}
+
+\end{document}
